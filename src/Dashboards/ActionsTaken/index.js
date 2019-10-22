@@ -143,10 +143,10 @@ const ActionsTaken = () => (
               <Text strong>Total Actions Disseminated</Text>
             </Col>
             <Col span={4}>
-              <Text strong>Action Acted Upon</Text>
+              <Text strong>Actions Acted Upon</Text>
             </Col>
             <Col span={4}>
-              <Text strong>Action Not Acted Upon</Text>
+              <Text strong>Actions Not Acted Upon</Text>
             </Col>
             <Col span={8}>
               <Text strong>Progress</Text>
@@ -182,10 +182,10 @@ const ActionsTaken = () => (
               <Text strong>Total Actions Disseminated</Text>
             </Col>
             <Col span={4}>
-              <Text strong>Action Acted Upon</Text>
+              <Text strong>Actions Acted Upon</Text>
             </Col>
             <Col span={4}>
-              <Text strong>Action Not Acted Upon</Text>
+              <Text strong>Actions Not Acted Upon</Text>
             </Col>
             <Col span={8}>
               <Text strong>Progress</Text>
