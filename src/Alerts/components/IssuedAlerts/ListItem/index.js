@@ -8,11 +8,11 @@ import './styles.css';
 /* constants */
 const { confirm } = Modal;
 const sideSpan = { xxl: 1, xl: 1, lg: 1, md: 2, sm: 3, xs: 3 };
-const urgencySpan = { xxl: 3, xl: 3, lg: 4, md: 5, sm: 0, xs: 0 };
-const statusSpan = { xxl: 2, xl: 3, lg: 3, md: 4, sm: 0, xs: 0 };
-const severitySpan = { xxl: 4, xl: 4, lg: 5, md: 7, sm: 0, xs: 0 };
-const eventSpan = { xxl: 8, xl: 7, lg: 6, md: 0, sm: 19, xs: 19 };
-const areaSpan = { xxl: 5, xl: 5, lg: 4, md: 5, sm: 0, xs: 0 };
+const eventSpan = { xxl: 8, xl: 8, lg: 7, md: 8, sm: 19, xs: 19 };
+const areaSpan = { xxl: 5, xl: 5, lg: 6, md: 5, sm: 0, xs: 0 };
+const urgencySpan = { xxl: 3, xl: 3, lg: 3, md: 3, sm: 0, xs: 0 };
+const statusSpan = { xxl: 3, xl: 3, lg: 3, md: 2, sm: 0, xs: 0 };
+const severitySpan = { xxl: 3, xl: 3, lg: 3, md: 3, sm: 0, xs: 0 };
 const isHoveredSpan = { xxl: 1, xl: 1, lg: 1, md: 1, sm: 2, xs: 2 };
 
 /**
