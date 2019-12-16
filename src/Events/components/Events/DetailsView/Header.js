@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography } from 'antd';
+import { Typography, Tag } from 'antd';
 
 const { Text } = Typography;
 
@@ -22,7 +22,11 @@ const EventDetailsViewHeader = ({
   description = 'N/A',
 }) => (
   <div>
-    <h5>{`${type} - ${number}`}</h5>
+    <h5>
+      {`${type} - ${number} `} <Tag color="magenta">High</Tag>
+      <Tag color="cyan">Likely</Tag>
+      <Tag color="blue">Geophysical</Tag>
+    </h5>
     <Text type="secondary" style={{ fontSize: '12px' }}>
       {description}
     </Text>

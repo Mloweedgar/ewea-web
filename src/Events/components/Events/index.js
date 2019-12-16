@@ -401,6 +401,7 @@ class Events extends Component {
             />
           </Modal>
           {/* end create/edit form modal */}
+
           {/* Event details drawer */}
           <Drawer
             title={
@@ -414,6 +415,7 @@ class Events extends Component {
             width="100%"
             onClose={this.closeEventDetails}
             visible={showEventDetails}
+            bodyStyle={{ overflow: 'hidden' }}
           >
             <EventDetailsViewBody />
           </Drawer>

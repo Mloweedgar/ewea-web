@@ -14,6 +14,12 @@ const respondingAgencies = [
   'Hospitals',
 ];
 
+const respondingFocals = [
+  'John Doe(TMA)',
+  'Jane Doe(DMDP)',
+  'James Void(TANROADS)',
+];
+
 const actionsTaken = [
   'Cleanup drains',
   'Ensure evacutation centers are in good condition',
@@ -66,7 +72,7 @@ export const EventActionTaken = () => {
   );
 };
 
-export const EventRespondingAgencies = () => {
+export const EventRespondedAgencies = () => {
   return (
     <div style={{ marginTop: '40px' }}>
       <EventDetailsSectionHeader title="AGENCIES RESPONDED" />
@@ -79,7 +85,18 @@ export const EventRespondingAgencies = () => {
   );
 };
 
-export const EventRespondingFocals = () => {};
+export const EventRespondedFocals = () => {
+  return (
+    <div style={{ marginTop: '40px' }}>
+      <EventDetailsSectionHeader title="FOCALS RESPONDED" />
+      {respondingFocals.map((person, key) => (
+        <p key={person} style={{ fontSize: '12px' }}>
+          {key + 1}. {person}
+        </p>
+      ))}
+    </div>
+  );
+};
 
 const EventToolbar = () => {
   return (
@@ -183,6 +200,76 @@ export const EventFeed = () => {
         >
           Technical testing 2015-09-01
         </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
+        <Timeline.Item
+          dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}
+        >
+          Technical testing 2015-09-01
+        </Timeline.Item>
       </Timeline>
     </>
   );
@@ -192,16 +279,19 @@ const EventDetailsViewBody = () => {
   return (
     <>
       <EventToolbar />
-      <Row>
-        <Col span={16}>
-          <EventLocation />
-          <EventRespondingAgencies />
-          <EventActionTaken />
-        </Col>
-        <Col span={8}>
-          <EventFeed />
-        </Col>
-      </Row>
+      <div style={{ height: '80vh', overflowY: 'auto' }}>
+        <Row>
+          <Col span={16}>
+            <EventLocation />
+            <EventRespondedAgencies />
+            <EventRespondedFocals />
+            <EventActionTaken />
+          </Col>
+          <Col span={8}>
+            <EventFeed />
+          </Col>
+        </Row>
+      </div>
     </>
   );
 };
