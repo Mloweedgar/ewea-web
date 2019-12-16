@@ -279,7 +279,7 @@ const EventDetailsViewBody = () => {
   return (
     <>
       <EventToolbar />
-      <div style={{ height: '80vh', overflowY: 'auto' }}>
+      <div className="EventDetailsContent">
         <Row>
           <Col span={16}>
             <EventLocation />

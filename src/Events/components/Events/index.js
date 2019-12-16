@@ -415,7 +415,7 @@ class Events extends Component {
             width="100%"
             onClose={this.closeEventDetails}
             visible={showEventDetails}
-            bodyStyle={{ overflow: 'hidden' }}
+            drawerStyle={{ overflow: 'hidden' }}
           >
             <EventDetailsViewBody />
           </Drawer>
