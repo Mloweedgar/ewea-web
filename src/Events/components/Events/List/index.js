@@ -169,7 +169,7 @@ class EventsList extends Component {
       total,
       onView,
       onEdit,
-      onFilter,
+      // onFilter,
       onShare,
       onBulkShare,
     } = this.props;
@@ -188,7 +188,7 @@ class EventsList extends Component {
           exportUrl={getEventsExportUrl({
             filter: { _id: map(selectedEvents, '_id') },
           })}
-          onFilter={onFilter}
+          // onFilter={onFilter}
           onPaginate={nextPage => {
             paginateEvents(nextPage);
           }}
@@ -285,7 +285,7 @@ EventsList.propTypes = {
   total: PropTypes.number.isRequired,
   onView: PropTypes.func.isRequired,
   onEdit: PropTypes.func.isRequired,
-  onFilter: PropTypes.func.isRequired,
+  // onFilter: PropTypes.func.isRequired,
   onShare: PropTypes.func.isRequired,
   onBulkShare: PropTypes.func.isRequired,
 };
