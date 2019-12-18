@@ -417,7 +417,7 @@ class Events extends Component {
             visible={showEventDetails}
             drawerStyle={{ overflow: 'hidden' }}
           >
-            <EventDetailsViewBody />
+            <EventDetailsViewBody event={event} />
           </Drawer>
 
           {/* End Event details drawer */}

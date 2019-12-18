@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, Timeline, Icon, Row, Col, Button } from 'antd';
+import { getEvent } from '@codetanzania/ewea-api-states';
 import PropTypes from 'prop-types';
 
 import './styles.css';
@@ -98,11 +99,19 @@ export const EventRespondedFocals = () => {
   );
 };
 
-const EventToolbar = () => {
+const EventToolbar = ({ id }) => {
   return (
     <div className="EventToolbar">
       <ButtonGroup>
-        <Button type="link" size="large" icon="reload" title="Refresh Event" />
+        <Button
+          type="link"
+          size="large"
+          icon="reload"
+          title="Refresh Event"
+          onClick={() => {
+            getEvent(id);
+          }}
+        />
         <Button
           type="link"
           size="large"
@@ -275,10 +284,10 @@ export const EventFeed = () => {
   );
 };
 
-const EventDetailsViewBody = () => {
+const EventDetailsViewBody = ({ event }) => {
   return (
     <>
-      <EventToolbar />
+      <EventToolbar id={event._id} /> {/* eslint-disable-line*/}
       <div className="EventDetailsContent">
         <Row>
           <Col span={16}>
@@ -294,6 +303,16 @@ const EventDetailsViewBody = () => {
       </div>
     </>
   );
+};
+
+EventToolbar.propTypes = {
+  id: PropTypes.string.isRequired,
+};
+
+EventDetailsViewBody.propTypes = {
+  event: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default EventDetailsViewBody;
